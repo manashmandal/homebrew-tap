@@ -3,7 +3,7 @@ cask "gale" do
   name "gale"
   desc "Self-hosted GitHub Actions runner manager with auto-scaling"
   homepage "https://github.com/manashmandal/gale"
-  version "2025.12.27"
+  version "2025.1227.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "gale" do
   on_macos do
     on_intel do
       url "https://github.com/manashmandal/gale/releases/download/v#{version}/gale_#{version}_darwin_amd64.tar.gz"
-      sha256 "542957f5c69447ad1abd6877630c7ecac24aba6cef5ca531f48ee8dcce897e16"
+      sha256 "ebad7d9be1c4a283a17f1ef0bb5924fb446a449a926c371bd89e998ee69b5bb1"
     end
     on_arm do
       url "https://github.com/manashmandal/gale/releases/download/v#{version}/gale_#{version}_darwin_arm64.tar.gz"
-      sha256 "1d311b0c8ea5c03447e5c8d6f99ac7145947c2f45a42af8cd806dacca7f188bd"
+      sha256 "1c396bc9e7e08b8da85a18ff5fa144f6785057d7758b53c9c9b2c6deba90d055"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/manashmandal/gale/releases/download/v#{version}/gale_#{version}_linux_amd64.tar.gz"
-      sha256 "33226f41f818aaf998178f0714e6f8655c44ff8e386fa6f3aefdfd44fb5ba5f3"
+      sha256 "c47a47ee8a988953058f61fc4a779962ff770013c2402560702e295d80d818fc"
     end
     on_arm do
       url "https://github.com/manashmandal/gale/releases/download/v#{version}/gale_#{version}_linux_arm64.tar.gz"
-      sha256 "8d4631f3fd51d4222ab9a402ea27fd89196642278f384c16bb85359945644747"
+      sha256 "8bb0eca5cc751f023e31db360da3d31d01c6696f36447d94fd384ea47e9375f7"
     end
   end
 
