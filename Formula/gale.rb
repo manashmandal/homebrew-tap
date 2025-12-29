@@ -3,28 +3,28 @@ require_relative "../lib/private_strategy"
 class Gale < Formula
   desc "Self-hosted GitHub Actions runner manager with auto-scaling"
   homepage "https://github.com/manashmandal/gale"
-  version "2025.1229.3"
+  version "2025.1229.4"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/manashmandal/gale/releases/download/v2025.1229.3/gale_2025.1229.3_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
-      sha256 "6a92ebf42a2c5d4cb8582de3d40ab790b60682df09739fcadd4758e217abea5c"
+      url "https://github.com/manashmandal/gale/releases/download/v2025.1229.4/gale_2025.1229.4_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+      sha256 "f74eb3e32422e565dba7d36ac3c02bfcabedd0421987311c6f8a7acd42950ad1"
     end
     on_arm do
-      url "https://github.com/manashmandal/gale/releases/download/v2025.1229.3/gale_2025.1229.3_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
-      sha256 "ab74a852e1422814f1c0951ae8f0132530767aaba5e1d601ddc68f4d4b2bbdc8"
+      url "https://github.com/manashmandal/gale/releases/download/v2025.1229.4/gale_2025.1229.4_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+      sha256 "3278829932f0b107aecbbf91e0d5f2280433059bf98b863cee2dc9c18a8f5311"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/manashmandal/gale/releases/download/v2025.1229.3/gale_2025.1229.3_linux_amd64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
-      sha256 "ef8c4232db79de1af06fa4305f9881c0c3ea78403d7c8001c5d04077d15557ea"
+      url "https://github.com/manashmandal/gale/releases/download/v2025.1229.4/gale_2025.1229.4_linux_amd64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+      sha256 "4bde67e7c061c99f4721d3ac4504109b52e4e92ee6717532c433c97bfe8f9eb8"
     end
     on_arm do
-      url "https://github.com/manashmandal/gale/releases/download/v2025.1229.3/gale_2025.1229.3_linux_arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
-      sha256 "3d29faa21c92f8298bd63cce525807eced2755c595e5da9134487ed818b6c286"
+      url "https://github.com/manashmandal/gale/releases/download/v2025.1229.4/gale_2025.1229.4_linux_arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+      sha256 "d71c3ebb46b6f9c88922a283fc025bdace0e188bcf744160267168b50f9bd4e9"
     end
   end
 
