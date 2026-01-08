@@ -1,8 +1,8 @@
 class WgetUi < Formula
   desc "Modern web-based download manager powered by wget"
   homepage "https://github.com/manashmandal/wget-ui"
-  url "https://github.com/manashmandal/wget-ui/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "e9cca0e90c992029a40ad774e4eb7ee1366ed794fbc9f087a54fcd1209a49c12"
+  url "https://github.com/manashmandal/wget-ui/archive/refs/tags/v0.0.2.tar.gz"
+  sha256 "e35b00a6a691ee6a277382dcd9c13c60d4b1d341b4759c07d452785fe36590ab"
   license "MIT"
   head "https://github.com/manashmandal/wget-ui.git", branch: "main"
 
