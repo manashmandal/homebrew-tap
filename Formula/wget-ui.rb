@@ -1,8 +1,8 @@
 class WgetUi < Formula
   desc "Modern web-based download manager powered by wget"
   homepage "https://github.com/manashmandal/wget-ui"
-  url "https://github.com/manashmandal/wget-ui/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  url "https://github.com/manashmandal/wget-ui/archive/refs/tags/v0.0.1.tar.gz"
+  sha256 "e9cca0e90c992029a40ad774e4eb7ee1366ed794fbc9f087a54fcd1209a49c12"
   license "MIT"
   head "https://github.com/manashmandal/wget-ui.git", branch: "main"
 
@@ -12,7 +12,6 @@ class WgetUi < Formula
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "-o", bin/"wget-ui", "."
     
-    # Install web assets
     (share/"wget-ui").install "web"
     (var/"wget-ui").mkpath
   end
