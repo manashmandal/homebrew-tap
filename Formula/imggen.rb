@@ -5,21 +5,21 @@
 class Imggen < Formula
   desc "CLI tool for generating images using AI image generation APIs"
   homepage "https://github.com/manashmandal/imggen"
-  version "0.0.9"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/manashmandal/imggen/releases/download/v0.0.9/imggen_0.0.9_darwin_amd64.tar.gz"
-      sha256 "35fde90da9aa260746163e15fc04494f0b2d94f47c4641159b6c13e562bf453e"
+      url "https://github.com/manashmandal/imggen/releases/download/v0.1.0/imggen_0.1.0_darwin_amd64.tar.gz"
+      sha256 "a200bf1761adb5dcec46115e027e3c077e9ebc9771213bf5f06e5e8b4fbd0e0b"
 
       def install
         bin.install "imggen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/manashmandal/imggen/releases/download/v0.0.9/imggen_0.0.9_darwin_arm64.tar.gz"
-      sha256 "947df9bc3734c8b065e9239de1fedd5452575ad7a789db2a20776d3f9595baa9"
+      url "https://github.com/manashmandal/imggen/releases/download/v0.1.0/imggen_0.1.0_darwin_arm64.tar.gz"
+      sha256 "1294608dca6e3a01be3db95e6b7ede51bdc99103d1eefb164f961ceb528c02b7"
 
       def install
         bin.install "imggen"
@@ -29,15 +29,15 @@ class Imggen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manashmandal/imggen/releases/download/v0.0.9/imggen_0.0.9_linux_amd64.tar.gz"
-      sha256 "f5b6bec8bb75b5b9387e1c613c6c07510eb4edba054dc26041b50bb90c325e14"
+      url "https://github.com/manashmandal/imggen/releases/download/v0.1.0/imggen_0.1.0_linux_amd64.tar.gz"
+      sha256 "08f248105849eecd58c930ce48ba5eeeff03b10a60488ad85870a88535447b97"
       def install
         bin.install "imggen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manashmandal/imggen/releases/download/v0.0.9/imggen_0.0.9_linux_arm64.tar.gz"
-      sha256 "f14b9e12ecf09032e0d5bd0cb86058bc831e6c4a1db497fa559aea2ccf3ddd37"
+      url "https://github.com/manashmandal/imggen/releases/download/v0.1.0/imggen_0.1.0_linux_arm64.tar.gz"
+      sha256 "8da7e0328dea57d52504b7bf5f3e384c6530d7802a33859062028640a83e5c60"
       def install
         bin.install "imggen"
       end
