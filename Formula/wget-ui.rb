@@ -1,7 +1,10 @@
+require_relative "../lib/private_strategy"
+
 class WgetUi < Formula
   desc "Modern web-based download manager powered by wget"
   homepage "https://github.com/manashmandal/wget-ui"
-  url "https://github.com/manashmandal/wget-ui/archive/refs/tags/v0.0.5.tar.gz"
+  url "https://github.com/manashmandal/wget-ui/archive/refs/tags/v0.0.5.tar.gz",
+      using: GitHubPrivateRepositoryArchiveDownloadStrategy
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
   license "MIT"
   head "https://github.com/manashmandal/wget-ui.git", branch: "main"
