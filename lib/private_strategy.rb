@@ -57,10 +57,29 @@ end
 
 class GitHubPrivateRepositoryArchiveDownloadStrategy < CurlDownloadStrategy
   def initialize(url, name, version, **meta)
-    token = ENV["HOMEBREW_GITHUB_API_TOKEN"]
-    raise CurlDownloadStrategyError, "HOMEBREW_GITHUB_API_TOKEN is required." unless token
+    @token = ENV["HOMEBREW_GITHUB_API_TOKEN"]
+    raise CurlDownloadStrategyError, "HOMEBREW_GITHUB_API_TOKEN is required." unless @token
 
-    meta[:headers] = Array(meta[:headers]) + ["Authorization: token #{token}"]
+    meta[:headers] = Array(meta[:headers]) + ["Authorization: token #{@token}"]
     super(url, name, version, **meta)
+    parse_url_pattern
+  end
+
+  def _fetch(url:, resolved_url:, timeout:)
+    curl_download "https://api.github.com/repos/#{@owner}/#{@repo}/tarball/#{@tag}",
+                  "--header", "Authorization: token #{@token}",
+                  "--header", "Accept: application/vnd.github.v3+json",
+                  to: temporary_path
+  end
+
+  private
+
+  def parse_url_pattern
+    url_pattern = %r{https://github.com/([^/]+)/([^/]+)/archive/refs/tags/([^/]+)\.tar\.gz}
+    unless @url =~ url_pattern
+      raise CurlDownloadStrategyError, "Invalid url pattern for GitHub Archive."
+    end
+
+    _, @owner, @repo, @tag = *@url.match(url_pattern)
   end
 end
