@@ -5,21 +5,21 @@
 class Imggen < Formula
   desc "CLI tool for generating images using AI image generation APIs"
   homepage "https://github.com/manashmandal/imggen"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/manashmandal/imggen/releases/download/v0.3.0/imggen_0.3.0_darwin_amd64.tar.gz"
-      sha256 "207adeeab2ab6662efa597aa0d7ac5239d8642c33cfbf620e0d2b2b99db08f39"
+      url "https://github.com/manashmandal/imggen/releases/download/v0.4.0/imggen_0.4.0_darwin_amd64.tar.gz"
+      sha256 "b06e48eab8bdbbd8ee491eb5c4f49333187e88652271085e58551836559ab613"
 
       define_method(:install) do
         bin.install "imggen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/manashmandal/imggen/releases/download/v0.3.0/imggen_0.3.0_darwin_arm64.tar.gz"
-      sha256 "4dfb943507c6823e6bcba0585788b88771d5eceed68c7c6b7b6e13db8cea7543"
+      url "https://github.com/manashmandal/imggen/releases/download/v0.4.0/imggen_0.4.0_darwin_arm64.tar.gz"
+      sha256 "996dcf117fc47600d3eeb96d17b076632f41498c1b2dd32acf96cffedb6584f8"
 
       define_method(:install) do
         bin.install "imggen"
@@ -29,15 +29,15 @@ class Imggen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manashmandal/imggen/releases/download/v0.3.0/imggen_0.3.0_linux_amd64.tar.gz"
-      sha256 "f7323656cfbea34ed11bfccc5c47d873dea468912646aad57a9af9664824a3db"
+      url "https://github.com/manashmandal/imggen/releases/download/v0.4.0/imggen_0.4.0_linux_amd64.tar.gz"
+      sha256 "2c0425620d6efcffdf7e8cfcf1d968fc8f6aef144e9606f85936c680f67cf31a"
       define_method(:install) do
         bin.install "imggen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/manashmandal/imggen/releases/download/v0.3.0/imggen_0.3.0_linux_arm64.tar.gz"
-      sha256 "050f0a282b147185aa2f1d4f9c5c7631ac8ec81228f8e776d399d2d6087451a4"
+      url "https://github.com/manashmandal/imggen/releases/download/v0.4.0/imggen_0.4.0_linux_arm64.tar.gz"
+      sha256 "e3a4dfb7392bb6853bd3f89fef0fd32adf23d6e2be75bb38c5f9ddb04300a19c"
       define_method(:install) do
         bin.install "imggen"
       end
